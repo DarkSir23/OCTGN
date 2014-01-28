@@ -422,6 +422,24 @@ namespace Octgn.Windows
             }
         }
 
+        private void MenuSetBuilderClick(object sender, RoutedEventArgs e)
+        {
+            if (GameManager.Get().GameCount == 0)
+            {
+                TopMostMessageBox.Show(
+                    "You need to install a game before you can use the set builder.",
+                    "OCTGN",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Error);
+                return;
+            }
+            if (WindowManager.SetBuilder == null)
+            {
+                WindowManager.SetBuilder = new SetBuilder.SetBuilderWindow();
+                WindowManager.SetBuilder.Show();
+            }
+        }
+
         private void MenuOptionsClick(object sender, RoutedEventArgs e)
         {
             var options = new Options();

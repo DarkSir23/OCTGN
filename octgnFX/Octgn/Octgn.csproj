@@ -444,6 +444,9 @@
     <Compile Include="Scripting\Versions\Script_3_1_0_1.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="SetBuilder\SetBuilderWindow.xaml.cs">
+      <DependentUpon>SetBuilderWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SubscriptionModule.cs" />
     <Compile Include="Tabs\GameManagement\FeedGameViewModel.cs" />
     <Compile Include="Tabs\GameManagement\GameManagement.xaml.cs">
@@ -1189,6 +1192,10 @@
     <Page Include="Scripting\Controls\MarkerDlg.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SetBuilder\SetBuilderWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tabs\GameManagement\GameManagement.xaml">
       <Generator>MSBuild:Compile</Generator>

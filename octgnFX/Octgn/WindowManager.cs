@@ -9,12 +9,14 @@
     using Octgn.DeckBuilder;
     using Octgn.Play;
     using Octgn.Windows;
+    using Octgn.SetBuilder;
 
     public static class WindowManager
     {
         public static DWindow DebugWindow { get; set; }
         public static Main Main { get; set; }
         public static DeckBuilderWindow DeckEditor { get; set; }
+        public static SetBuilderWindow SetBuilder { get; set; }
         public static PlayWindow PlayWindow { get; set; }
         //public static PreGameLobbyWindow PreGameLobbyWindow { get; set; }
         public static ConcurrentBag<ChatWindow> ChatWindows { get; internal set; }
