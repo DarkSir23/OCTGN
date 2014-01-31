@@ -82,6 +82,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octide", "octgnFX\Octide\Octide.csproj", "{8E3EE43C-8702-445F-95A8-ABC91F3337A8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Octgn.Tools.SetBuilder", "octgnFX\Octgn.Tools.Setbuilder\Octgn.Tools.SetBuilder.csproj", "{9B2B9BC6-93F2-45EF-8B33-DAA8760A4528}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AB487BD2-9CF7-4C4E-A938-5B9FEE4C4E76} = {AB487BD2-9CF7-4C4E-A938-5B9FEE4C4E76}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
