@@ -422,21 +422,21 @@ namespace Octgn.Windows
             }
         }
 
-        private void MenuSetBuilderClick(object sender, RoutedEventArgs e)
+        private void MenuModuleBuilderClick(object sender, RoutedEventArgs e)
         {
             if (GameManager.Get().GameCount == 0)
             {
                 TopMostMessageBox.Show(
-                    "You need to install a game before you can use the set builder.",
+                    "You need to install a game before you can use the module builder.",
                     "OCTGN",
                     MessageBoxButton.OK,
                     MessageBoxImage.Error);
                 return;
             }
-            if (WindowManager.SetBuilder == null)
+            if (WindowManager.ModuleBuilder == null)
             {
-                WindowManager.SetBuilder = new SetBuilder.SetBuilderWindow();
-                WindowManager.SetBuilder.Show();
+                WindowManager.ModuleBuilder = new ModuleBuilder.ModuleBuilderWindow();
+                WindowManager.ModuleBuilder.Show();
             }
         }
 

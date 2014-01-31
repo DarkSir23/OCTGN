@@ -13,14 +13,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Octgn.SetBuilder
+namespace Octgn.ModuleBuilder
 {
     /// <summary>
-    /// Interaction logic for SetBuilderWindow.xaml
+    /// Interaction logic for ModuleBuilderWindow.xaml
     /// </summary>
-    public partial class SetBuilderWindow : INotifyPropertyChanged
+    public partial class ModuleBuilderWindow : INotifyPropertyChanged
     {
-        public SetBuilderWindow()
+        public ModuleBuilderWindow()
         {
             InitializeComponent();
         }
@@ -29,7 +29,7 @@ namespace Octgn.SetBuilder
         {
             base.OnClosing(e);
 
-            WindowManager.SetBuilder = null;
+            WindowManager.ModuleBuilder = null;
         }
         protected void OnPropertyChanged(string propertyName)
         {

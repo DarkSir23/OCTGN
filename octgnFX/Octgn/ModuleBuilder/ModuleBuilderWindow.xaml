@@ -1,9 +1,9 @@
-﻿<ctrl:OctgnChrome x:Class="Octgn.SetBuilder.SetBuilderWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<ctrl:OctgnChrome x:Class="Octgn.ModuleBuilder.ModuleBuilderWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ctrl="clr-namespace:Octgn.Controls" xmlns:deck="clr-namespace:Octgn.DeckBuilder"
-        xmlns:gui="clr-namespace:Octgn.Play.Gui" xmlns:set="clr-namespace:Octgn.SetBuilder"
+        xmlns:gui="clr-namespace:Octgn.Play.Gui" xmlns:set="clr-namespace:Octgn.ModuleBuilder"
                   xmlns:octgn="clr-namespace:Octgn"
                   x:Name="self"
-        Title="Octgn Set Builder" Height="650" Width="800" Style="{StaticResource Window}" WindowIcon="pack://application:,,,/OCTGN;component/Resources/Icon.ico">
+        Title="Octgn Module Builder" Height="650" Width="800" Style="{StaticResource Window}" WindowIcon="pack://application:,,,/OCTGN;component/Resources/Icon.ico">
 
     <AdornerDecorator x:Name="ad">
         <Grid x:Name="theGrid">
@@ -22,7 +22,6 @@
         			<MenuItem Header="Save Set" HorizontalAlignment="Left" Width="105"/>
         		</MenuItem>
         	</Menu>
-        	<TreeView Name="x:tree_GameDef"  Grid.Row="1" Grid.Column="0"/>
             <deck:DeckEditorPreviewControl x:Name="cardImageControl"  Margin="4,4,2,2" Grid.Row="1" Grid.Column="1" />
 
 
