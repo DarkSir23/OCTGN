@@ -58,7 +58,8 @@ namespace Octgn.Tools.SetBuilder
             cmSet.MenuItems.Add("Add Pack", new EventHandler(AddItem_Click));
             cmSet.MenuItems.Add("Save Set", new EventHandler(SaveSet_Click));
             cmSet.MenuItems.Add("Remove Set", new EventHandler(DeleteItem_Click));
-            
+
+            cmCard.MenuItems.Add("Copy GUID", new EventHandler(CopyCardGuid_Click));
             cmCard.MenuItems.Add("Add Property", new EventHandler(AddItem_Click));
             cmCard.MenuItems.Add("Add Alternate", new EventHandler(AddItem_Click));
             cmCard.MenuItems.Add("Duplicate Card", new EventHandler(DuplicateCard_Click));
@@ -220,7 +221,11 @@ namespace Octgn.Tools.SetBuilder
         private void DuplicateItem_Click(object sender, EventArgs e)
         {
         }
-
+        private void CopyCardGuid_Click(object sender, EventArgs e)
+        {
+            cardObject card = (cardObject)tree_GameDef.SelectedNode.Tag;
+            Clipboard.SetText(card.id.ToString());
+        }
         private void DeleteItem_Click(object sender, EventArgs e)
         {
             MenuItem orig = (MenuItem)sender;
