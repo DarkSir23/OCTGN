@@ -520,8 +520,16 @@ namespace Octgn.Networking
                 Program.GameMess.PlayerEvent(player, "removes {0} {1} marker(s) from {2}", count, name, card);
                 if (isScriptChange == false)
                 {
-                    Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_0(card, marker.Model.ModelString(), oldCount, newCount, isScriptChange);
-                    Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_1(card, marker.Model.ModelString(), oldCount, newCount, isScriptChange);
+                    if (player == Player.LocalPlayer && marker == null)
+                    {
+						Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_0(card, "None", oldCount, newCount, isScriptChange);
+						Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_1(card, "None", oldCount, newCount, isScriptChange);
+                    }
+                    else
+                    {
+						Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_0(card, marker.Model.ModelString(), oldCount, newCount, isScriptChange);
+						Program.GameEngine.EventProxy.OnMarkerChanged_3_1_0_1(card, marker.Model.ModelString(), oldCount, newCount, isScriptChange);
+                    }
                 }
 
             }
@@ -531,6 +539,11 @@ namespace Octgn.Networking
         public void TransferMarker(Player player, Card from, Card to, Guid id, string name, ushort count, ushort oldCount, bool isScriptChange)
         {
             Marker marker = from.FindMarker(id, name);
+            if (player == null)
+            {
+                Program.GameMess.Warning("Inconsistent state. Cannot transfer marker to unknown player.");
+                return;
+            }
             if (player != Player.LocalPlayer)
             {
                 if (marker == null)

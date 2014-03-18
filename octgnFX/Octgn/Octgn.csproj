@@ -689,6 +689,9 @@
     <Compile Include="Windows\Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\PickCardFromList.xaml.cs">
+      <DependentUpon>PickCardFromList.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\ShareDeck.xaml.cs">
       <DependentUpon>ShareDeck.xaml</DependentUpon>
     </Compile>
@@ -746,6 +749,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DoVersionStuff.tt</DependentUpon>
     </Resource>
+    <Resource Include="Resources\people.png" />
     <Content Include="Scripting\Lib\bisect.py">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1256,6 +1260,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Windows\Options.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\PickCardFromList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

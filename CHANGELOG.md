@@ -1,3 +1,29 @@
+#3.1.129.301 - Test
++ Fixed some errors spectators were causing - Kelly
++ Replaced feed list with a drop down - Kelly
++ Allow for screen sizes down to 800x600 - Kelly
++ Added box to ask if using wine to fix mac/linux issues - Kelly
++ Added check to see if running on network drive with potential fixes - Kelly
++ Added links to octgn status page and twitter account - Kelly
++ Added some more descriptive errors in o8build - Kelly
+
+#3.1.129.300 - Test
++ Fixed some errors spectators were causing - Kelly
++ Replaced feed list with a drop down - Kelly
++ Allow for screen sizes down to 800x600 - Kelly
++ Added box to ask if using wine to fix mac/linux issues - Kelly
++ Added check to see if running on network drive with potential fixes - Kelly
++ Added links to octgn status page and twitter account - Kelly
+
+#3.1.129.299 - Test
++ Fixed some errors spectators were causing - Kelly
+
+#3.1.129.298
++ Made hand density user configurable - Soul1355
+
+#3.1.128.298 - Test
++ Made hand density user configurable - Soul1355
+
 #3.1.128.297 - Test
 + Made hand density user configurable - Soul1355
 
